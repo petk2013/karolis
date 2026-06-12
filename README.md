@@ -4,9 +4,19 @@ A fast, single-page marketing site for a lead generation agency. Static HTML + T
 
 ## Structure
 
-- `index.html` — the entire site (hero, services, process, testimonials, lead capture form, FAQ)
+- `index.html` — the main site (hero with pipeline dashboard, services, process, testimonials, lead capture form, FAQ)
+- `privacy.html` / `terms.html` — legal pages
 - `assets/main.css` — compiled Tailwind stylesheet (committed, so the site deploys as-is)
 - `src/input.css` + `tailwind.config.js` — Tailwind source and design tokens
+
+## Activating the contact form
+
+The form posts to Formspree via AJAX (with client-side validation, loading state, and success/error feedback). To make it deliver:
+
+1. Create a free form at [formspree.io](https://formspree.io)
+2. In `index.html`, replace `YOUR_FORM_ID` in the form's `action` with your form ID (e.g. `https://formspree.io/f/abcdwxyz`)
+
+Until then, submissions show a graceful error message with the fallback email.
 
 ## Editing styles
 
@@ -25,6 +35,6 @@ Any static host works — GitHub Pages, Netlify, Vercel, Cloudflare Pages. Just 
 ## To do before launch
 
 - Replace placeholder client names, testimonials, and stats with real ones
-- Point the contact form `action` at a form backend (Formspree, Netlify Forms, Tally) or your CRM
-- Set the real booking link ("Book a 20-min intro call")
-- Update the contact email and add Privacy/Terms pages
+- Set up the Formspree form ID (see above)
+- Update the contact email (`hello@leadwell.agency`) to a real address everywhere
+- Review the Privacy Policy and Terms pages and adapt them to your jurisdiction
