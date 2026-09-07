@@ -20,7 +20,7 @@ jobs:
       - name: Collect site files
         run: |
           mkdir dist
-          cp -r index.html privacy.html terms.html assets dist/
+          cp -r index.html privacy.html terms.html assets funded dist/
           touch dist/.nojekyll
       - uses: peaceiris/actions-gh-pages@v4
         with:
