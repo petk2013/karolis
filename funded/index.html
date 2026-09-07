@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ascendra Futures — Get Funded to Trade Futures</title>
+  <meta name="description" content="Pass the Ascendra evaluation and trade a funded futures account. Keep up to 90% of your profits, with payouts every two weeks.">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 17l6-6 4 4 8-8'/%3E%3Cpath d='M17 7h4v4'/%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ascendra Futures — Get Funded to Trade Futures">
+  <meta property="og:description" content="Pass the evaluation, trade our capital, keep up to 90% of the profits.">
+  <meta property="og:site_name" content="Ascendra Futures">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/main.css">
+</head>
+<body class="bg-slate-950 font-sans text-slate-100 antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-emerald-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-slate-950">Skip to main content</a>
+
+  <!-- Announcement bar -->
+  <div class="bg-emerald-500 px-4 py-2 text-center text-sm font-semibold text-slate-950">
+    New trader offer — first evaluation 40% off with code <span class="font-extrabold">ASCEND40</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#" class="flex items-center gap-2 text-lg font-extrabold tracking-tight text-white">
+        <svg class="h-7 w-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/>
+        </svg>
+        Ascendra
+      </a>
+      <div class="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+        <a href="#how" class="rounded-sm transition-colors duration-150 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">How it works</a>
+        <a href="#accounts" class="rounded-sm transition-colors duration-150 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">Accounts</a>
+        <a href="#rules" class="rounded-sm transition-colors duration-150 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">Rules</a>
+        <a href="#payouts" class="rounded-sm transition-colors duration-150 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">Payouts</a>
+        <a href="#faq" class="rounded-sm transition-colors duration-150 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">FAQ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#start" class="hidden h-10 cursor-pointer items-center rounded-lg px-4 text-sm font-semibold text-slate-300 transition-colors duration-150 hover:text-white sm:inline-flex">Log in</a>
+        <a href="#start" class="inline-flex h-10 cursor-pointer items-center rounded-lg bg-emerald-500 px-4 text-sm font-bold text-slate-950 transition-colors duration-150 hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
+          Start evaluation
+        </a>
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"
+          class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg text-slate-300 transition-colors duration-150 hover:bg-slate-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 lg:hidden">
+          <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+          <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-slate-800 bg-slate-950 lg:hidden">
+      <div class="space-y-1 px-4 py-3">
+        <a href="#how" class="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-300 transition-colors duration-150 hover:bg-slate-900 hover:text-white">How it works</a>
+        <a href="#accounts" class="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-300 transition-colors duration-150 hover:bg-slate-900 hover:text-white">Accounts</a>
+        <a href="#rules" class="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-300 transition-colors duration-150 hover:bg-slate-900 hover:text-white">Rules</a>
+        <a href="#payouts" class="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-300 transition-colors duration-150 hover:bg-slate-900 hover:text-white">Payouts</a>
+        <a href="#faq" class="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-300 transition-colors duration-150 hover:bg-slate-900 hover:text-white">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b border-slate-800">
+      <div class="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] [background-size:56px_56px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-semibold text-emerald-300">
+              <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+              Funding futures traders since 2019
+            </p>
+            <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl xl:text-6xl">
+              Trade our capital.<br>Keep up to <span class="text-emerald-400">90%</span> of the profits.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
+              Pass a one-step evaluation to prove your strategy, then trade a funded account of up to $150,000. No personal capital at risk on the live account — payouts every two weeks.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#accounts" class="inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-emerald-500 px-8 text-base font-bold text-slate-950 transition-colors duration-150 hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:w-auto">
+                See account sizes
+              </a>
+              <a href="#how" class="inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-slate-700 px-8 text-base font-semibold text-white transition-colors duration-150 hover:border-slate-600 hover:bg-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:w-auto">
+                How it works
+              </a>
+            </div>
+            <dl class="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-slate-800 pt-8">
+              <div class="flex flex-col-reverse gap-1">
+                <dt class="text-xs font-medium text-slate-500 sm:text-sm">paid to traders</dt>
+                <dd class="text-2xl font-extrabold tabular-nums text-white sm:text-3xl">$24M</dd>
+              </div>
+              <div class="flex flex-col-reverse gap-1">
+                <dt class="text-xs font-medium text-slate-500 sm:text-sm">funded accounts</dt>
+                <dd class="text-2xl font-extrabold tabular-nums text-white sm:text-3xl">9,800</dd>
+              </div>
+              <div class="flex flex-col-reverse gap-1">
+                <dt class="text-xs font-medium text-slate-500 sm:text-sm">countries served</dt>
+                <dd class="text-2xl font-extrabold tabular-nums text-white sm:text-3xl">120+</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Account dashboard mockup -->
+          <div class="relative mx-auto w-full max-w-lg lg:max-w-none" aria-hidden="true">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl shadow-emerald-500/5">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div>
+                  <p class="text-sm text-slate-500">Funded Account · #A-10482</p>
+                  <p class="text-xl font-extrabold tabular-nums text-white">$100,000</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-300">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Funded
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 py-5">
+                <div class="rounded-lg bg-slate-800/50 p-3">
+                  <p class="text-xs font-medium text-slate-500">Net P&amp;L</p>
+                  <p class="mt-1 text-lg font-extrabold tabular-nums text-emerald-400">+$8,240</p>
+                </div>
+                <div class="rounded-lg bg-slate-800/50 p-3">
+                  <p class="text-xs font-medium text-slate-500">Win rate</p>
+                  <p class="mt-1 text-lg font-extrabold tabular-nums text-white">61%</p>
+                </div>
+                <div class="rounded-lg bg-slate-800/50 p-3">
+                  <p class="text-xs font-medium text-slate-500">Drawdown</p>
+                  <p class="mt-1 text-lg font-extrabold tabular-nums text-white">$1,150</p>
+                </div>
+              </div>
+
+              <!-- Equity curve -->
+              <div class="rounded-lg border border-slate-800 bg-slate-950/50 p-4">
+                <div class="flex items-center justify-between">
+                  <p class="text-sm font-semibold text-slate-300">Equity curve</p>
+                  <p class="text-xs text-slate-500">30 days</p>
+                </div>
+                <svg class="mt-3 h-24 w-full" viewBox="0 0 320 96" fill="none" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="eq" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 82 L27 76 L53 79 L80 66 L107 70 L133 55 L160 58 L187 44 L213 47 L240 32 L267 30 L293 20 L320 12 L320 96 L0 96 Z" fill="url(#eq)"/>
+                  <path d="M0 82 L27 76 L53 79 L80 66 L107 70 L133 55 L160 58 L187 44 L213 47 L240 32 L267 30 L293 20 L320 12" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="mt-4 flex items-center justify-between rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-4">
+                <div>
+                  <p class="text-sm font-semibold text-white">Next payout</p>
+                  <p class="text-xs text-slate-400">Requested Mar 14 · 90% split</p>
+                </div>
+                <p class="text-xl font-extrabold tabular-nums text-emerald-400">$7,416</p>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 -z-10 h-full w-full rounded-2xl border border-slate-800/60" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value props strip -->
+    <section class="border-b border-slate-800 bg-slate-900/40">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div class="flex gap-3">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <div>
+            <h3 class="font-bold text-white">One-step evaluation</h3>
+            <p class="mt-1 text-sm text-slate-400">No second phase. Hit the target, follow the rules, get funded.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <div>
+            <h3 class="font-bold text-white">No time limit</h3>
+            <p class="mt-1 text-sm text-slate-400">Take as long as you need. Minimum five trading days.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <div>
+            <h3 class="font-bold text-white">Payouts every 2 weeks</h3>
+            <p class="mt-1 text-sm text-slate-400">Request on demand once you clear the buffer. Paid in 1–3 days.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <div>
+            <h3 class="font-bold text-white">Keep your strategy</h3>
+            <p class="mt-1 text-sm text-slate-400">Scalping, swing, algos and news trading all permitted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">How it works</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Three steps to a funded account</h2>
+          <p class="mt-4 text-lg text-slate-400">Prove the strategy on a simulated account, then trade ours for real.</p>
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-3" data-reveal>
+          <div class="relative rounded-2xl border border-slate-800 bg-slate-900/50 p-7 pt-9">
+            <span class="absolute -top-4 left-7 flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-sm font-extrabold text-slate-950" aria-hidden="true">1</span>
+            <h3 class="text-xl font-bold text-white">Take the evaluation</h3>
+            <p class="mt-3 leading-relaxed text-slate-400">Pick an account size and trade it on our simulated platform. Reach the profit target across at least five trading days without breaching the drawdown.</p>
+            <p class="mt-4 text-sm font-semibold text-emerald-400">Typically 2–4 weeks</p>
+          </div>
+          <div class="relative rounded-2xl border border-slate-800 bg-slate-900/50 p-7 pt-9">
+            <span class="absolute -top-4 left-7 flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-sm font-extrabold text-slate-950" aria-hidden="true">2</span>
+            <h3 class="text-xl font-bold text-white">Get funded</h3>
+            <p class="mt-3 leading-relaxed text-slate-400">Pass and we issue a funded account within one business day. Same platform, same rules — the profits are now real and the capital is ours.</p>
+            <p class="mt-4 text-sm font-semibold text-emerald-400">Next business day</p>
+          </div>
+          <div class="relative rounded-2xl border border-slate-800 bg-slate-900/50 p-7 pt-9">
+            <span class="absolute -top-4 left-7 flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-sm font-extrabold text-slate-950" aria-hidden="true">3</span>
+            <h3 class="text-xl font-bold text-white">Withdraw profits</h3>
+            <p class="mt-3 leading-relaxed text-slate-400">Request a payout any time after your buffer is cleared. You keep 90% of everything you make, paid by bank transfer or crypto.</p>
+            <p class="mt-4 text-sm font-semibold text-emerald-400">Paid in 1–3 days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account tiers -->
+    <section id="accounts" class="scroll-mt-16 border-y border-slate-800 bg-slate-900/40">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">Accounts</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Choose your account size</h2>
+          <p class="mt-4 text-lg text-slate-400">One flat monthly fee during the evaluation. Cancel any time — no fee once you're funded.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4" data-reveal>
+          <!-- 25K -->
+          <div class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <p class="text-sm font-semibold text-slate-400">Starter</p>
+            <p class="mt-1 text-3xl font-extrabold tabular-nums text-white">$25,000</p>
+            <p class="mt-4 flex items-baseline gap-1">
+              <span class="text-2xl font-extrabold tabular-nums text-white">$49</span>
+              <span class="text-sm text-slate-500">/ month</span>
+            </p>
+            <dl class="mt-6 space-y-3 border-t border-slate-800 pt-6 text-sm">
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit target</dt><dd class="font-semibold tabular-nums text-white">$1,500</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max drawdown</dt><dd class="font-semibold tabular-nums text-white">$1,500</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Daily loss limit</dt><dd class="font-semibold tabular-nums text-white">$550</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max contracts</dt><dd class="font-semibold tabular-nums text-white">3</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit split</dt><dd class="font-semibold tabular-nums text-emerald-400">90%</dd></div>
+            </dl>
+            <a href="#start" class="mt-6 inline-flex h-11 cursor-pointer items-center justify-center rounded-lg border border-slate-700 text-sm font-semibold text-white transition-colors duration-150 hover:border-slate-600 hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+              Start evaluation
+            </a>
+          </div>
+
+          <!-- 50K -->
+          <div class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <p class="text-sm font-semibold text-slate-400">Standard</p>
+            <p class="mt-1 text-3xl font-extrabold tabular-nums text-white">$50,000</p>
+            <p class="mt-4 flex items-baseline gap-1">
+              <span class="text-2xl font-extrabold tabular-nums text-white">$89</span>
+              <span class="text-sm text-slate-500">/ month</span>
+            </p>
+            <dl class="mt-6 space-y-3 border-t border-slate-800 pt-6 text-sm">
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit target</dt><dd class="font-semibold tabular-nums text-white">$3,000</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max drawdown</dt><dd class="font-semibold tabular-nums text-white">$2,000</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Daily loss limit</dt><dd class="font-semibold tabular-nums text-white">$1,100</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max contracts</dt><dd class="font-semibold tabular-nums text-white">6</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit split</dt><dd class="font-semibold tabular-nums text-emerald-400">90%</dd></div>
+            </dl>
+            <a href="#start" class="mt-6 inline-flex h-11 cursor-pointer items-center justify-center rounded-lg border border-slate-700 text-sm font-semibold text-white transition-colors duration-150 hover:border-slate-600 hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+              Start evaluation
+            </a>
+          </div>
+
+          <!-- 100K — highlighted -->
+          <div class="relative flex flex-col rounded-2xl border-2 border-emerald-500 bg-slate-900 p-6 shadow-lg shadow-emerald-500/10">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-emerald-500 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-slate-950">Most popular</span>
+            <p class="text-sm font-semibold text-emerald-400">Professional</p>
+            <p class="mt-1 text-3xl font-extrabold tabular-nums text-white">$100,000</p>
+            <p class="mt-4 flex items-baseline gap-1">
+              <span class="text-2xl font-extrabold tabular-nums text-white">$149</span>
+              <span class="text-sm text-slate-500">/ month</span>
+            </p>
+            <dl class="mt-6 space-y-3 border-t border-slate-800 pt-6 text-sm">
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit target</dt><dd class="font-semibold tabular-nums text-white">$6,000</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max drawdown</dt><dd class="font-semibold tabular-nums text-white">$3,000</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Daily loss limit</dt><dd class="font-semibold tabular-nums text-white">$2,200</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max contracts</dt><dd class="font-semibold tabular-nums text-white">12</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit split</dt><dd class="font-semibold tabular-nums text-emerald-400">90%</dd></div>
+            </dl>
+            <a href="#start" class="mt-6 inline-flex h-11 cursor-pointer items-center justify-center rounded-lg bg-emerald-500 text-sm font-bold text-slate-950 transition-colors duration-150 hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+              Start evaluation
+            </a>
+          </div>
+
+          <!-- 150K -->
+          <div class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <p class="text-sm font-semibold text-slate-400">Elite</p>
+            <p class="mt-1 text-3xl font-extrabold tabular-nums text-white">$150,000</p>
+            <p class="mt-4 flex items-baseline gap-1">
+              <span class="text-2xl font-extrabold tabular-nums text-white">$219</span>
+              <span class="text-sm text-slate-500">/ month</span>
+            </p>
+            <dl class="mt-6 space-y-3 border-t border-slate-800 pt-6 text-sm">
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit target</dt><dd class="font-semibold tabular-nums text-white">$9,000</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max drawdown</dt><dd class="font-semibold tabular-nums text-white">$4,500</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Daily loss limit</dt><dd class="font-semibold tabular-nums text-white">$3,300</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Max contracts</dt><dd class="font-semibold tabular-nums text-white">15</dd></div>
+              <div class="flex justify-between gap-2"><dt class="text-slate-400">Profit split</dt><dd class="font-semibold tabular-nums text-emerald-400">90%</dd></div>
+            </dl>
+            <a href="#start" class="mt-6 inline-flex h-11 cursor-pointer items-center justify-center rounded-lg border border-slate-700 text-sm font-semibold text-white transition-colors duration-150 hover:border-slate-600 hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+              Start evaluation
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-8 text-center text-sm text-slate-500">All accounts trade CME futures: ES, NQ, CL, GC, 6E and micros. Evaluation fee is billed monthly and stops the moment you pass.</p>
+      </div>
+    </section>
+
+    <!-- Rules -->
+    <section id="rules" class="scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">The rules</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Four rules. That's the whole rulebook.</h2>
+          <p class="mt-4 text-lg text-slate-400">No hidden clauses designed to fail you. Break none of these and the account stays yours.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2" data-reveal>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-500/10">
+              <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 15-5-5-4 4-3-3"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-white">Trailing drawdown</h3>
+            <p class="mt-2 leading-relaxed text-slate-400">Your maximum loss level trails your highest closed balance until it reaches your starting balance, then it locks. It never trails past break-even.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-500/10">
+              <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-white">Daily loss limit</h3>
+            <p class="mt-2 leading-relaxed text-slate-400">A soft stop that ends your trading day if hit. It resets at the next session open — hitting it does not fail your account.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-500/10">
+              <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 2v4"/><path d="M16 2v4"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-white">Five trading days minimum</h3>
+            <p class="mt-2 leading-relaxed text-slate-400">You need at least five days with a filled trade before passing. This stops a single lucky session from qualifying an account.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-500/10">
+              <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-white">Flat before the close</h3>
+            <p class="mt-2 leading-relaxed text-slate-400">Close all positions before the daily settlement window. No overnight or weekend exposure on funded accounts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payouts -->
+    <section id="payouts" class="scroll-mt-16 border-y border-slate-800 bg-slate-900/40">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div data-reveal>
+            <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">Payouts</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">You keep 90%. We keep the risk.</h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-400">
+              Request a payout whenever your account sits above its buffer. Most are approved same day and settled within three business days by bank transfer, wire or USDC.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <p class="text-slate-300"><strong class="font-semibold text-white">No minimum withdrawal</strong> — take $200 or $20,000.</p>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <p class="text-slate-300"><strong class="font-semibold text-white">No payout caps</strong> — withdraw your full balance above the buffer.</p>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <p class="text-slate-300"><strong class="font-semibold text-white">Account survives a payout</strong> — your drawdown level is not reset.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-slate-800 bg-slate-900 p-7" data-reveal>
+            <p class="text-sm font-semibold text-slate-400">Recent payouts</p>
+            <ul class="mt-4 divide-y divide-slate-800">
+              <li class="flex items-center justify-between py-3.5">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300" aria-hidden="true">JT</span>
+                  <div><p class="text-sm font-semibold text-white">J. Tanaka</p><p class="text-xs text-slate-500">$100K account · Mar 12</p></div>
+                </div>
+                <p class="font-extrabold tabular-nums text-emerald-400">$6,480</p>
+              </li>
+              <li class="flex items-center justify-between py-3.5">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300" aria-hidden="true">MR</span>
+                  <div><p class="text-sm font-semibold text-white">M. Rivera</p><p class="text-xs text-slate-500">$50K account · Mar 12</p></div>
+                </div>
+                <p class="font-extrabold tabular-nums text-emerald-400">$3,115</p>
+              </li>
+              <li class="flex items-center justify-between py-3.5">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300" aria-hidden="true">AK</span>
+                  <div><p class="text-sm font-semibold text-white">A. Kowalski</p><p class="text-xs text-slate-500">$150K account · Mar 11</p></div>
+                </div>
+                <p class="font-extrabold tabular-nums text-emerald-400">$11,940</p>
+              </li>
+              <li class="flex items-center justify-between py-3.5">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300" aria-hidden="true">DS</span>
+                  <div><p class="text-sm font-semibold text-white">D. Sharma</p><p class="text-xs text-slate-500">$100K account · Mar 11</p></div>
+                </div>
+                <p class="font-extrabold tabular-nums text-emerald-400">$4,702</p>
+              </li>
+            </ul>
+            <p class="mt-4 border-t border-slate-800 pt-4 text-xs text-slate-500">Illustrative sample. Individual results vary and most traders do not reach a payout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">Funded traders</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">From evaluation to payout</h2>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-3" data-reveal>
+          <figure class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div>
+              <p class="inline-flex rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-300">Funded in 11 days</p>
+              <blockquote class="mt-4 leading-relaxed text-slate-300">&ldquo;The trailing drawdown locking at break-even is the part that made it workable for me. I stopped trading scared and my results got better immediately.&rdquo;</blockquote>
+            </div>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-slate-300" aria-hidden="true">RC</span>
+              <div><p class="font-semibold text-white">Ryan C.</p><p class="text-sm text-slate-500">ES scalper · $50K account</p></div>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div>
+              <p class="inline-flex rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-300">4 payouts to date</p>
+              <blockquote class="mt-4 leading-relaxed text-slate-300">&ldquo;I failed my first two evaluations and nobody hid that from me — the dashboard showed exactly which rule I broke and when. Third one stuck.&rdquo;</blockquote>
+            </div>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-slate-300" aria-hidden="true">PN</span>
+              <div><p class="font-semibold text-white">Priya N.</p><p class="text-sm text-slate-500">NQ swing · $100K account</p></div>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/50 p-7">
+            <div>
+              <p class="inline-flex rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-300">Payout in 2 days</p>
+              <blockquote class="mt-4 leading-relaxed text-slate-300">&ldquo;Requested on a Tuesday, money landed Thursday. That alone puts them ahead of the two firms I used before.&rdquo;</blockquote>
+            </div>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-slate-300" aria-hidden="true">TB</span>
+              <div><p class="font-semibold text-white">Tom B.</p><p class="text-sm text-slate-500">CL day trader · $150K account</p></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup -->
+    <section id="start" class="scroll-mt-16 border-y border-slate-800 bg-slate-900/40">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-2">
+          <div data-reveal>
+            <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">Get started</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Start your evaluation</h2>
+            <p class="mt-4 text-lg leading-relaxed text-slate-400">
+              Tell us which account you want and we'll send your platform credentials and evaluation dashboard within one business day.
+            </p>
+            <ul class="mt-6 space-y-3 text-slate-400">
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Cancel any time, no contract
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Reset your evaluation free once a month
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Support from funded traders, not a call centre
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            FORM SETUP: create a free form at https://formspree.io, then replace
+            YOUR_FORM_ID below with your real form ID (e.g. https://formspree.io/f/abcdwxyz).
+          -->
+          <form id="lead-form" class="rounded-2xl border border-slate-800 bg-slate-900 p-8" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate data-reveal>
+            <div class="space-y-5">
+              <div>
+                <label for="name" class="mb-1.5 block text-sm font-semibold text-white">Full name <span class="text-red-400" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="name-error"
+                  class="h-12 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 text-base text-white placeholder-slate-600 transition-colors duration-150 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+                  placeholder="Jane Smith">
+                <p id="name-error" class="mt-1.5 hidden text-sm font-medium text-red-400"></p>
+              </div>
+              <div>
+                <label for="email" class="mb-1.5 block text-sm font-semibold text-white">Email <span class="text-red-400" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" aria-describedby="email-hint email-error"
+                  class="h-12 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 text-base text-white placeholder-slate-600 transition-colors duration-150 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+                  placeholder="jane@email.com">
+                <p id="email-error" class="mt-1.5 hidden text-sm font-medium text-red-400"></p>
+                <p id="email-hint" class="mt-1.5 text-sm text-slate-500">Your platform credentials are sent here.</p>
+              </div>
+              <div>
+                <label for="account" class="mb-1.5 block text-sm font-semibold text-white">Account size</label>
+                <select id="account" name="account"
+                  class="h-12 w-full cursor-pointer rounded-lg border border-slate-700 bg-slate-950 px-4 text-base text-white transition-colors duration-150 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30">
+                  <option value="25000">$25,000 — Starter ($49/mo)</option>
+                  <option value="50000">$50,000 — Standard ($89/mo)</option>
+                  <option value="100000" selected>$100,000 — Professional ($149/mo)</option>
+                  <option value="150000">$150,000 — Elite ($219/mo)</option>
+                </select>
+              </div>
+              <button id="submit-btn" type="submit"
+                class="inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-emerald-500 text-base font-bold text-slate-950 transition-colors duration-150 hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-60">
+                <svg id="submit-spinner" class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8v4a4 4 0 0 0-4 4H4z"/></svg>
+                <span id="submit-label">Start my evaluation</span>
+              </button>
+              <p id="form-status" class="hidden rounded-lg p-3 text-center text-sm font-medium" role="alert"></p>
+              <p class="text-center text-xs leading-relaxed text-slate-500">By continuing you agree to our <a href="terms.html" class="text-emerald-400 underline-offset-2 hover:underline">Terms</a> and <a href="privacy.html" class="text-emerald-400 underline-offset-2 hover:underline">Privacy Policy</a>. Futures trading carries substantial risk of loss.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="scroll-mt-16">
+      <div class="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div class="text-center" data-reveal>
+          <p class="text-sm font-bold uppercase tracking-wider text-emerald-400">FAQ</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Questions traders ask</h2>
+        </div>
+        <div class="mt-12 divide-y divide-slate-800" data-reveal>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              Is my own money at risk?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">Only the monthly evaluation fee. Trading losses on both the evaluation and the funded account are ours, not yours — you can never owe us money from a losing trade.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              What happens if I break a rule?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">Hitting the daily loss limit simply ends your trading day. Breaching the maximum drawdown closes the account — you can restart an evaluation immediately, and existing subscribers get one free reset each month.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              Can I use automated strategies?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">Yes. Algorithmic and semi-automated systems are allowed, as are scalping, news trading and holding through economic releases. What's not allowed is exploiting simulated fills or copy-trading across many accounts to game the evaluation.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              Which markets and platforms are supported?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">CME equity index, energy, metals and FX futures, including all micro contracts. Accounts work with the major desktop and web futures platforms — you'll pick yours during onboarding.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              How long until I get paid?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">Payout requests are reviewed the same business day and settled within one to three days after that, depending on your withdrawal method.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
+              Do most people pass?
+              <svg class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 leading-relaxed text-slate-400">No. Most traders who start an evaluation do not reach a funded account, and most funded accounts do not reach a large payout. Treat the fee as the cost of a test you may not pass.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="border-t border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950">
+      <div class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Ready to trade real size?</h2>
+        <p class="mx-auto mt-4 max-w-xl text-lg text-slate-400">Start an evaluation today and get your platform access tomorrow.</p>
+        <a href="#start" class="mt-8 inline-flex h-12 cursor-pointer items-center justify-center rounded-lg bg-emerald-500 px-8 text-base font-bold text-slate-950 transition-colors duration-150 hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
+          Start evaluation
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <a href="#" class="flex items-center gap-2 text-lg font-extrabold tracking-tight text-white">
+            <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
+            Ascendra
+          </a>
+          <p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">Funding disciplined futures traders with real capital and honest rules.</p>
+        </div>
+        <nav aria-label="Footer — program">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300">Program</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-500">
+            <li><a href="#how" class="transition-colors duration-150 hover:text-white">How it works</a></li>
+            <li><a href="#accounts" class="transition-colors duration-150 hover:text-white">Account sizes</a></li>
+            <li><a href="#rules" class="transition-colors duration-150 hover:text-white">Trading rules</a></li>
+            <li><a href="#payouts" class="transition-colors duration-150 hover:text-white">Payouts</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Footer — support">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300">Support</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-500">
+            <li><a href="#faq" class="transition-colors duration-150 hover:text-white">FAQ</a></li>
+            <li><a href="mailto:support@ascendra.example" class="transition-colors duration-150 hover:text-white">Contact support</a></li>
+            <li><a href="privacy.html" class="transition-colors duration-150 hover:text-white">Privacy Policy</a></li>
+            <li><a href="terms.html" class="transition-colors duration-150 hover:text-white">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300">Get in touch</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-500">
+            <li><a href="mailto:support@ascendra.example" class="transition-colors duration-150 hover:text-white">support@ascendra.example</a></li>
+            <li><a href="#start" class="transition-colors duration-150 hover:text-white">Start an evaluation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 space-y-4 border-t border-slate-800 pt-8">
+        <p class="rounded-lg border border-slate-800 bg-slate-900/50 p-4 text-xs leading-relaxed text-slate-500">
+          <strong class="font-bold text-slate-400">Risk disclosure.</strong> Futures trading involves substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. Evaluation accounts are simulated and do not represent live market execution. The figures, payouts and testimonials shown on this page are illustrative placeholders for demonstration purposes. Ascendra Futures is a fictional company used as a website template.
+        </p>
+        <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <p class="text-sm text-slate-500">&copy; 2026 Ascendra Futures. All rights reserved.</p>
+          <div class="flex gap-6 text-sm text-slate-500">
+            <a href="privacy.html" class="transition-colors duration-150 hover:text-white">Privacy</a>
+            <a href="terms.html" class="transition-colors duration-150 hover:text-white">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Mobile menu ---------- */
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      function setMenu(open) {
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      toggle.addEventListener('click', function () {
+        setMenu(menu.classList.contains('hidden'));
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setMenu(false);
+      });
+
+      /* ---------- Scroll reveal ---------- */
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        var revealEls = document.querySelectorAll('[data-reveal]');
+        revealEls.forEach(function (el) { el.classList.add('reveal-init'); });
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+
+      /* ---------- Signup form ---------- */
+      var form = document.getElementById('lead-form');
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+      var submitBtn = document.getElementById('submit-btn');
+      var spinner = document.getElementById('submit-spinner');
+      var submitLabel = document.getElementById('submit-label');
+      var statusEl = document.getElementById('form-status');
+
+      function setFieldError(input, message) {
+        var errorEl = document.getElementById(input.id + '-error');
+        if (!errorEl) return;
+        if (message) {
+          errorEl.textContent = message;
+          errorEl.classList.remove('hidden');
+          input.classList.add('border-red-500');
+          input.setAttribute('aria-invalid', 'true');
+        } else {
+          errorEl.textContent = '';
+          errorEl.classList.add('hidden');
+          input.classList.remove('border-red-500');
+          input.removeAttribute('aria-invalid');
+        }
+      }
+
+      function validateName() {
+        var ok = nameInput.value.trim().length >= 2;
+        setFieldError(nameInput, ok ? '' : 'Please enter your full name.');
+        return ok;
+      }
+      function validateEmail() {
+        var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailInput.value.trim());
+        setFieldError(emailInput, ok ? '' : 'Please enter a valid email address.');
+        return ok;
+      }
+
+      nameInput.addEventListener('blur', validateName);
+      emailInput.addEventListener('blur', validateEmail);
+      nameInput.addEventListener('input', function () { setFieldError(nameInput, ''); });
+      emailInput.addEventListener('input', function () { setFieldError(emailInput, ''); });
+
+      function showStatus(type, message) {
+        statusEl.textContent = message;
+        statusEl.classList.remove('hidden', 'bg-emerald-500/10', 'text-emerald-300', 'bg-red-500/10', 'text-red-300');
+        statusEl.classList.add(type === 'success' ? 'bg-emerald-500/10' : 'bg-red-500/10',
+                               type === 'success' ? 'text-emerald-300' : 'text-red-300');
+      }
+
+      function setLoading(loading) {
+        submitBtn.disabled = loading;
+        spinner.classList.toggle('hidden', !loading);
+        submitLabel.textContent = loading ? 'Sending…' : 'Start my evaluation';
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        statusEl.classList.add('hidden');
+
+        var nameOk = validateName();
+        var emailOk = validateEmail();
+        if (!nameOk || !emailOk) {
+          (!nameOk ? nameInput : emailInput).focus();
+          return;
+        }
+
+        setLoading(true);
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+          if (response.ok) {
+            form.reset();
+            showStatus('success', 'Thanks! Check your inbox — your evaluation details are on the way.');
+          } else {
+            showStatus('error', 'Something went wrong. Please email support@ascendra.example instead.');
+          }
+        }).catch(function () {
+          showStatus('error', 'Network error — please try again in a moment.');
+        }).finally(function () {
+          setLoading(false);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
